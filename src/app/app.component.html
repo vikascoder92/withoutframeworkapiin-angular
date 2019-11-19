@@ -1,0 +1,53 @@
+<div class="models">
+<button class="btn-signup" (click)="openComponent()" style="width:auto;">Create User</button>
+<div>
+<table class="table table-bordered " id="table">
+  <tr class="tr">
+  <td class="td">id</td>
+  <td class="td">Employee Name</td>
+  <td class="td">Employee salary</td>
+  <td class="td">Employee age</td>
+  <td class="td">Profile Image</td>
+</tr>
+
+  <tr *ngFor="let com of lstcomments">
+    <td class="td">{{com.id}}</td>
+    <td class="td">{{com.employee_name}}</td>
+    <td class="td">{{com.employee_salary}}</td>
+    <td class="td">{{com.employee_age}}</td>
+    <td class="td">{{com.profile_image}}</td>
+    <td><button class="Edit">Edit</button></td>
+    <td><button class="delete">Delete</button></td>
+    
+  </tr>
+</table>
+
+
+<table class="table table-bordered ">
+<tr>
+    <td class="td">id</td>
+  <td class="td">Employee Name</td>
+  <td class="td">Employee salary</td>
+  <td class="td">Employee age</td>
+  <td class="td">Profile Image</td>
+</tr>
+
+<tr *ngIf="lstPosts">
+    <td class="td">{{lstPosts.id}}</td>
+    <td class="td">{{lstPosts.employee_name}}</td>
+    <td class="td">{{lstPosts.employee_salary}}</td>
+    <td class="td">{{lstPosts.employee_age}}</td>
+    <td class="td">{{lstPosts.profile_image}}</td>
+    <td><button class="Edit">Edit</button></td>
+    <td><button class="delete">Delete</button></td>
+  </tr>
+
+</table>
+</div>
+</div>
+
+<app-signup *ngIf="isOpenSignUp"></app-signup>
+
+
+
+

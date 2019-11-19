@@ -1,0 +1,33 @@
+
+<div class="modal">
+  <div class="modal-content animate">
+    <button class="close" (click)="closeComponent()">X</button>
+      <form  #userForm="ngForm">
+          <label>
+            <p class="label-txt">NAME</p>
+            <input required type="text" name="name" [(ngModel)]="oposts.name"  class="input" placeholder="ENTER NAME">
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+          </label>
+          <label>
+            <p class="label-txt">SALARY</p>
+            <input type="number" class="input" name="salary" [(ngModel)]="oposts.salary" placeholder="ENTER SALARY" >
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+          </label>
+          <label>
+            <p class="label-txt">AGE</p>
+            <input type="text" class="input" name="age" minlength="1"  [(ngModel)]="oposts.age" maxlength="2" placeholder="ENTER AGE" >
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+          </label>
+        </form >
+        
+<button class="button" (click)="onClickSubmit()" [disabled]="userForm.form.invalid" >SUBMIT</button>
+
+  </div>
+</div>
+
